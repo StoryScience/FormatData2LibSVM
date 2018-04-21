@@ -21,7 +21,7 @@ else:
 df = pd.read_csv(file_name, sep=delimiter, header=None)
 column_num = df.columns.size
 if column_num == 1:
-    print('parameter of the delimiter is wrong!')
+    print('delimiter is wrong!')
 else:
     for i in range(column_num-1):
         df[i] = str(i+1)+':'+df[i].astype('str')

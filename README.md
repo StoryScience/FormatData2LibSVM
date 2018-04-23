@@ -1,13 +1,10 @@
 # FormatData2LibSVM
-Python script used to transform data to LibSVM format
+This python script could transform data to LibSVM format.
 
-Users could run this file like this: $ python FormatData2Libsvm.py para1 para2
+Users could run it using command like this: `$ python FormatData2Libsvm.py para1 para2`.
 
-para1 is the name of the orignial file
+* `para1` is the name of the input file.
+* `para2` is the column delimiter in the input file: `0 -- blank (' '), 1 -- tab ('\t'), 2 -- comma (',')`.
 
-para2 is the column delimiter in the original file: 0 -- blank (' '), 1 -- tab ('\t'), 2 -- comma (',')
-
-Users could run this script using the data uploaded as following:
-
-$ python FormatData2Libsvm.py test_data 1
+For example, users could run it using the data uploaded like this: `$ python FormatData2Libsvm.py test_data 1`.
 

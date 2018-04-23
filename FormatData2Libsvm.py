@@ -1,11 +1,12 @@
 #!/usr/bin/python3
+import os
 import sys
 import pandas as pd
 
 para1 = str(sys.argv[1])
 para2 = int(sys.argv[2])
 
-file_name = para1
+file = para1
 if para2 == 0:
     delimiter = ' '
 elif para2 == 1:
@@ -15,10 +16,13 @@ elif para2 == 2:
 else:
     print('please input 1/2/3 as the parameter.')
 
-# file_name = 'test_data'
+# file = 'test_data'
 # delimiter = '\t'
 
-df = pd.read_csv(file_name, sep=delimiter, header=None)
+file_name = os.path.splitext(file)[0]
+file_suffix = os.path.splitext(file)[1]
+df = pd.read_csv(file, sep=delimiter, header=None)
+
 column_num = df.columns.size
 if column_num == 1:
     print('delimiter is wrong!')
@@ -28,5 +32,5 @@ else:
     column_name = df.columns.tolist()
     column_name = column_name[-1:] + column_name[:-1]
     df = df[column_name]
-    df.to_csv(file_name+'_formated', sep=delimiter, header=None, index=None)
+    df.to_csv(file_name+'_formated'+file_suffix, sep=delimiter, header=None, index=None)
     print('file was formated!')

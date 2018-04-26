@@ -33,4 +33,4 @@ else:
     column_name = column_name[-1:] + column_name[:-1]
     df = df[column_name]
     df.to_csv(file_name+'_formated'+file_suffix, sep=delimiter, header=None, index=None)
-    print('file was formated!')
+    print('your file is formated!')

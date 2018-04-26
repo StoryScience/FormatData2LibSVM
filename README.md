@@ -1,7 +1,7 @@
 # FormatData2LibSVM
 This python script could transform data to LibSVM format.
 
-Before running this script, please make sure you have installed Python3 with the packages `os, sys` and `pandas`.
+Before running this script, please make sure users have installed Python3 with the packages `os, sys` and `pandas`.
 
 Users could run it using command like this: `$ python FormatData2Libsvm.py para1 para2`.
 

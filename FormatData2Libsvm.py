@@ -14,7 +14,8 @@ elif para2 == 1:
 elif para2 == 2:
     delimiter = ','
 else:
-    print('please input 1/2/3 as the parameter.')
+    print('please input 0/1/2 as the parameter.')
+    sys.exit()
 
 # file = 'test_data'
 # delimiter = '\t'
@@ -33,4 +34,4 @@ else:
     column_name = column_name[-1:] + column_name[:-1]
     df = df[column_name]
     df.to_csv(file_name+'_formated'+file_suffix, sep=delimiter, header=None, index=None)
-    print('your file is formated!')
+    print('file was formated!')
